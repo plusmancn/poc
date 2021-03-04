@@ -1,0 +1,4 @@
+Agent-Class: cn.plusman.poc.httpclient.agent.SimpleHttpClientAgent
+Can-Redefine-Classes: true
+Can-Retransform-Classes: true
+Premain-Class: cn.plusman.poc.httpclient.agent.SimpleHttpClientAgent
