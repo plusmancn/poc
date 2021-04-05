@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.plusman.poc.mybatis.plus.explore.mapper.BlogMapper">
+    <resultMap id="BlogResultMap" type="Blog">
+        <id property="blogId" column="id"/>
+        <result property="jsonField" column="json_field" typeHandler="JsonTypeHandler"/>
+    </resultMap>
+
+    <select id="selectBlog" resultMap="BlogResultMap">
+        select id, content, camel_style, json_field from blog where id = #{id}
+    </select>
+    
+    <!-- 测试 lambda 时需要注释此段代码 -->
+    <!--<select id="selectList" resultMap="BlogResultMap">-->
+    <!--    select id, content, camel_style, json_field from blog-->
+    <!--</select>-->
+    
+    <select id="seleceBlogByPageHelper" resultMap="BlogResultMap">
+        select id, content, camel_style, json_field from blog
+    </select>
+</mapper>
