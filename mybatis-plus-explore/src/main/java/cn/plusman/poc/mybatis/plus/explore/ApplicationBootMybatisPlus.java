@@ -3,6 +3,7 @@ package cn.plusman.poc.mybatis.plus.explore;
 import cn.plusman.poc.mybatis.plus.explore.entity.Blog;
 import cn.plusman.poc.mybatis.plus.explore.entity.User;
 import cn.plusman.poc.mybatis.plus.explore.mapper.BlogMapper;
+import cn.plusman.poc.mybatis.plus.explore.util.SystemEnv;
 import com.baomidou.mybatisplus.core.MybatisSqlSessionFactoryBuilder;
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
@@ -29,9 +30,7 @@ public class ApplicationBootMybatisPlus {
             inputStream = Resources.getResourceAsStream(resource);
             SqlSessionFactory sqlSessionFactory =
                 // mybatis-plus 启动方式
-                new MybatisSqlSessionFactoryBuilder().build(inputStream);
-                // mybatis 启动方式
-                // new SqlSessionFactoryBuilder().build(inputStream);
+                new MybatisSqlSessionFactoryBuilder().build(inputStream, SystemEnv.getProperties());
         
             try (SqlSession session = sqlSessionFactory.openSession()) {
                 // testDuplicateMapperMethod(session);

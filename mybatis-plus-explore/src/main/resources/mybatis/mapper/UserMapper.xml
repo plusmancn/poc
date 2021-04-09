@@ -10,4 +10,11 @@
     <select id="selectByid3" resultType="User" flushCache="true">
         select * from users where id = #{1}
     </select>
+    
+    <select id="selectUserWithDollar" resultType="User">
+        select * from users where name = '${name}'
+    </select>
+    <select id="selectUserWithPound" resultType="User">
+        select * from users where name = #{name}
+    </select>
 </mapper>

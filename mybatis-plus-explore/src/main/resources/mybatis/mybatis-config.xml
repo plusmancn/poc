@@ -22,7 +22,7 @@
                 <property name="driver" value="com.mysql.jdbc.Driver"/>
                 <property name="url" value="jdbc:mysql://macair.plusman.cn:13306/learn-java?useSSL=false&amp;allowPublicKeyRetrieval=true"/>
                 <property name="username" value="root"/>
-                <property name="password" value="pL5K6yT$#0yEkkH5TrRE4Q"/>
+                <property name="password" value="${LEARN_JAVA_PASSSWORD}"/>
             </dataSource>
         </environment>
         <environment id="another">
@@ -31,7 +31,7 @@
                 <property name="driver" value="com.mysql.jdbc.Driver"/>
                 <property name="url" value="jdbc:mysql://macair.plusman.cn:13306/learn-java?useSSL=false&amp;allowPublicKeyRetrieval=true"/>
                 <property name="username" value="root"/>
-                <property name="password" value="pL5K6yT$#0yEkkH5TrRE4Q"/>
+                <property name="password" value="${LEARN_JAVA_PASSSWORD}"/>
             </dataSource>
         </environment>
     </environments>

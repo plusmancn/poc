@@ -15,4 +15,16 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  */
 public interface UserMapper {
     User selectByid3(Integer id);
+    
+    /**
+     * $ 号示例
+     * @return
+     */
+    User selectUserWithDollar(String name);
+    
+    /**
+     * # 号示例
+     * @return
+     */
+    User selectUserWithPound(String name);
 }
