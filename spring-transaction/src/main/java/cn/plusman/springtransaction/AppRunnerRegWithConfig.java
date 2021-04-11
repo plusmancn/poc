@@ -6,18 +6,17 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import org.springframework.util.Assert;
 
-
 /**
  * @author plusman
  */
-@Component // 通过注释 Component 可以关闭运行
-class AppRunner implements CommandLineRunner {
+// @Component // 通过注释 Component 可以关闭运行
+class AppRunnerRegWithConfig implements CommandLineRunner {
 
-	private final static Logger logger = LoggerFactory.getLogger(AppRunner.class);
+	private final static Logger logger = LoggerFactory.getLogger(AppRunnerRegWithConfig.class);
 
-	private final BookingService bookingService;
+	private final BookingServiceRegWithConfig bookingService;
 
-	public AppRunner(BookingService bookingService) {
+	public AppRunnerRegWithConfig(BookingServiceRegWithConfig bookingService) {
 		this.bookingService = bookingService;
 	}
 

@@ -18,9 +18,12 @@ public class PlainOldJDBCSample {
         Connection connection = DriverManager.getConnection("jdbc:h2:file:/tmp/plain_old_jdbc_sample", "sa", null); // (1)
         
         try {
+            // 设置隔离级别
+            connection.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
+            
             connection.setAutoCommit(false); // (2)
             // execute some SQL statements...
-            // insertTest();
+            // insertTest(connection);
             savepointTest(connection);
             
             connection.commit(); // (3)
