@@ -23,7 +23,7 @@ public class CompetitorConfiguration {
     }
     
     public void run() throws NacosException, InterruptedException {
-        String serverAddr = "macair.plusman.cn";
+        String serverAddr = "127.0.0.1";
         // try get leader
         String dataId = "cn.plusman.nacos.explore.lfe::leader";
         String group = "LFE";
@@ -54,7 +54,7 @@ public class CompetitorConfiguration {
         log.info("「{}」config content is: {}", this.name, content);
         
         // Hold on
-        Thread.sleep(40000);
+        Thread.sleep(4000);
         
         // boolean isRemoveOk = configService.removeConfig(dataId, group);
         // log.info("「{}」Remove Result is {}", this.name, isRemoveOk);

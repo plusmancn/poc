@@ -16,7 +16,7 @@ import java.util.Properties;
 public class Playground {
     public static void main(String[] args) {
         Properties properties = new Properties();
-        properties.setProperty("serverAddr", "macair.plusman.cn");
+        properties.setProperty("serverAddr", "127.0.0.1");
     
         try {
             NamingService naming = NamingFactory.createNamingService(properties);
