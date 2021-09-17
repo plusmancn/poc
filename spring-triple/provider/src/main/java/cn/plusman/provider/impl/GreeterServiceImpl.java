@@ -29,6 +29,6 @@ public class GreeterServiceImpl implements GreeterService {
     
     @Override
     public String sayHello(String message) {
-        return "From provider" + message;
+        return "From provider " + message;
     }
 }

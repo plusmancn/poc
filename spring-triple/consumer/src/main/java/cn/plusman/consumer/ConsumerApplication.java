@@ -1,17 +1,13 @@
 package cn.plusman.consumer;
 
+import org.apache.dubbo.common.constants.CommonConstants;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 
 import cn.plusman.api.GreeterService;
-import cn.plusman.api.hello.HelloReply;
-import cn.plusman.api.hello.HelloRequest;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Service;
 
 import java.util.concurrent.TimeUnit;
@@ -24,7 +20,7 @@ import java.util.concurrent.TimeUnit;
 @EnableDubbo(scanBasePackages = "cn.plusman")
 @Service
 public class ConsumerApplication {
-    @DubboReference
+    @DubboReference(protocol = CommonConstants.TRIPLE)
     private GreeterService greeterService;
     
     public static void main(String[] args) {
