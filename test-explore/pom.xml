@@ -5,19 +5,16 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>cn.plusman.poc</groupId>
-    <artifactId>poc</artifactId>
+    <artifactId>test-explore</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     
     <modules>
-        <module>dubbo27x-explore</module>
-        <module>http2</module>
-        <module>httpclient</module>
-        <module>mybatis-plus-explore</module>
-        <module>nacos-explore</module>
-        <module>nacos2-explore</module>
-        <module>spring-transaction</module>
-        <module>spring-triple</module>
-        <module>test-explore</module>
+        <module>junit5</module>
     </modules>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
 </project>

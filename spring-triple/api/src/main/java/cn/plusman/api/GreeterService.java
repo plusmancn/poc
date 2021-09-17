@@ -16,9 +16,6 @@
  */
 package cn.plusman.api;
 
-import cn.plusman.api.hello.HelloReply;
-import cn.plusman.api.hello.HelloRequest;
-
 public interface GreeterService {
 
     /**
