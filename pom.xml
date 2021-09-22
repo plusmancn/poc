@@ -19,5 +19,6 @@
         <module>spring-transaction</module>
         <module>spring-triple</module>
         <module>test-explore</module>
+        <module>bi-playground</module>
     </modules>
 </project>
