@@ -16,6 +16,10 @@ public class DateTimeTest {
     private final static DateFormat inputFormat = new SimpleDateFormat("yyyy-MM-dd");
     
     
+    /**
+     * 每年第一周测试
+     * @throws ParseException
+     */
     @Test
     public void weekTest() throws ParseException {
         SimpleDateFormat weekFormatter = new SimpleDateFormat("w");
@@ -73,5 +77,22 @@ public class DateTimeTest {
         calendar.setTime(inputFormat.parse("2021-01-04"));
         weekYear = calendar.get(Calendar.WEEK_OF_YEAR);
         Assertions.assertEquals(2, weekYear);
+    }
+    
+    /**
+     * 月内操作
+     */
+    @Test
+    public void getThisMonthDays() throws ParseException {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(inputFormat.parse("2021-01-01"));
+    
+        // 获取本月最后一天
+        int theLastDayOfMonth = calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
+        Assertions.assertEquals(31, theLastDayOfMonth);
+    
+        calendar.setTime(inputFormat.parse("2021-02-15"));
+        theLastDayOfMonth = calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
+        Assertions.assertEquals(28, theLastDayOfMonth);
     }
 }
