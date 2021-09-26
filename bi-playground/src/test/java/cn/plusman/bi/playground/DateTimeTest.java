@@ -95,4 +95,28 @@ public class DateTimeTest {
         theLastDayOfMonth = calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
         Assertions.assertEquals(28, theLastDayOfMonth);
     }
+    
+    /**
+     * 季度操作，注意月份是从 0 开始计数的
+     */
+    @Test
+    public void getThisQuarter() throws ParseException {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(inputFormat.parse("2021-01-01"));
+        
+        calendar.add(Calendar.MONTH, 3 - (calendar.get(Calendar.MONTH) + 1) % 3);
+        Assertions.assertEquals(2, calendar.get(Calendar.MONTH));
+    }
+    
+    /**
+     * 年度操作，注意月份是从 0 开始计数的
+     */
+    @Test
+    public void getThisYear() throws ParseException {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(inputFormat.parse("2021-01-01"));
+        
+        calendar.add(Calendar.MONTH, 12 - (calendar.get(Calendar.MONTH) + 1) % 12);
+        Assertions.assertEquals(11, calendar.get(Calendar.MONTH));
+    }
 }
