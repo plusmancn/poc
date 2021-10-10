@@ -20,5 +20,6 @@
         <module>spring-triple</module>
         <module>test-explore</module>
         <module>bi-playground</module>
+        <module>jvm-explore</module>
     </modules>
 </project>
