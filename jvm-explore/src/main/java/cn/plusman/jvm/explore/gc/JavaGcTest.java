@@ -1,4 +1,4 @@
-package cn.plusman.jvm.explore;
+package cn.plusman.jvm.explore.gc;
 
 /**
  * 本实例用于java GC以后，新生代survivor区域的变化，以及晋升到老年代的时间和方式的测试代码。需要自行分步注释不需要的代码进行反复测试对比

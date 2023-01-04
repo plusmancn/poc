@@ -1,6 +1,5 @@
-package cn.plusman.jvm.explore;
+package cn.plusman.jvm.explore.gc;
 
-import java.lang.ref.SoftReference;
 import java.lang.ref.WeakReference;
 
 /**

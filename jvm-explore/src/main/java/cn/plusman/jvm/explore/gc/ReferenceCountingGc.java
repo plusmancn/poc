@@ -1,4 +1,4 @@
-package cn.plusman.jvm.explore;
+package cn.plusman.jvm.explore.gc;
 
 /**
  * @author plusman
